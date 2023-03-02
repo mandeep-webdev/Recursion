@@ -18,7 +18,7 @@ const find = (arr,target,index) => {
   
 }
 
-const ans = find([2,34,23,12,44],23,0)
+const ans = find([2,34,23,12,44,23],23,0)
 console.log(ans)
 
 // Search from End Index
