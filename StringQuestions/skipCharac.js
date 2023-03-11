@@ -2,20 +2,20 @@
 // Eg: bafamapa , skip a and the output will be -- bfmp
 
 
-function skipCharac(str,output) {
-  debugger
- // base Condition 
-  if(str === '') {
-    console.log(output)
-    return
+function skipCh(str,ansStr) {
+  // base condition
+  if(str === ''){
+    return ansStr
   }
-  const ch = str.charAt(0)
-  if(ch === 'a') {
-    skipCharac(str.substring(1),output)
+ const ch = str[0]
+  if(ch !== 'a') {
+    return skipCh(str.substring(1),ansStr + ch)
   }
   else {
-    skipCharac(str.substring(1),output+ch)
+    return skipCh(str.substring(1),ansStr)
   }
 }
 
-skipCharac('bafamapa','')
+
+const ans = skipCh('mann','')
+console.log(ans)
