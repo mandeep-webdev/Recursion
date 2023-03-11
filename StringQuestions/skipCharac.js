@@ -7,7 +7,7 @@ function skipCh(str,ansStr) {
   if(str === ''){
     return ansStr
   }
- const ch = str[0]
+ const ch = str[0]        
   if(ch !== 'a') {
     return skipCh(str.substring(1),ansStr + ch)
   }

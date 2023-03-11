@@ -1,22 +1,27 @@
 // approach2
 
-function skipCh(str) {
-  debugger
+
+function skip(str) {
+
+  let ansStr = ''
+
   // base condition
   if(str === '') {
-    return ''
+    return ansStr
   }
-  const ch = str.charAt(0)
-  if(ch ==='a'){
-    return  skipCh(str.substring(1))
-  }else{
-   
-   return ch + skipCh(str.substring(1))
-    
+
+  const ch = str[0]
+
+  if(ch === 'a') {
+    return skip(str.substring(1))
   }
- 
+    const ansFromBelowCalls = skip(str.substring(1))
+
+    ansStr = ch + ansFromBelowCalls 
+    return ansStr
   
 }
 
-const ans = skipCh('pama')
+
+const ans = skip('mandeepkaur')
 console.log(ans)
